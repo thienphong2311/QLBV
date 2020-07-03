@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="QLBNModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CT_KQXN">
+          <Key>
+            <PropertyRef Name="Ma_CT_KQXN" />
+          </Key>
+          <Property Name="Ma_CT_KQXN" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="MaKQ" Type="char" MaxLength="10" />
+          <Property Name="Loai_XN" Type="char" MaxLength="10" />
+          <Property Name="Glucose" Type="float" />
+          <Property Name="Urê" Type="float" />
+          <Property Name="Creatinin" Type="float" />
+          <Property Name="Cholesterol" Type="float" />
+          <Property Name="Triglycerid" Type="float" />
+          <Property Name="HDL_Cholesterol" Type="float" />
+          <Property Name="AST_GOT" Type="float" />
+          <Property Name="ALT_GPT" Type="float" />
+          <Property Name="GGT" Type="float" />
+          <Property Name="Acid_Uric" Type="float" />
+        </EntityType>
+        <EntityType Name="KQXN">
+          <Key>
+            <PropertyRef Name="MaKQ" />
+          </Key>
+          <Property Name="MaKQ" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="MaBN" Type="char" MaxLength="10" />
+          <Property Name="Khoa" Type="nvarchar" MaxLength="50" />
+          <Property Name="Chuan_Doan" Type="nvarchar" MaxLength="255" />
+          <Property Name="TG_NM" Type="datetime" />
+          <Property Name="BS_ChiDinh" Type="nvarchar" MaxLength="50" />
+          <Property Name="Loai_XN" Type="char" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="TT_BenhNhan">
+          <Key>
+            <PropertyRef Name="MaBN" />
+          </Key>
+          <Property Name="MaBN" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="Ten_BN" Type="nvarchar" MaxLength="50" />
+          <Property Name="Gioi_Tinh" Type="nvarchar" MaxLength="10" />
+          <Property Name="Dia_Chi" Type="nvarchar" MaxLength="255" />
+          <Property Name="Ngay_Sinh" Type="datetime" />
+          <Property Name="So_BHYT" Type="nvarchar" MaxLength="20" />
+          <Property Name="Loai_DV_Kham" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityContainer Name="QLBNModelStoreContainer">
+          <EntitySet Name="CT_KQXN" EntityType="Self.CT_KQXN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KQXN" EntityType="Self.KQXN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TT_BenhNhan" EntityType="Self.TT_BenhNhan" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="QLBNModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CT_KQXN">
+          <Key>
+            <PropertyRef Name="Ma_CT_KQXN" />
+          </Key>
+          <Property Name="Ma_CT_KQXN" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MaKQ" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="Loai_XN" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="Glucose" Type="Double" />
+          <Property Name="Urê" Type="Double" />
+          <Property Name="Creatinin" Type="Double" />
+          <Property Name="Cholesterol" Type="Double" />
+          <Property Name="Triglycerid" Type="Double" />
+          <Property Name="HDL_Cholesterol" Type="Double" />
+          <Property Name="AST_GOT" Type="Double" />
+          <Property Name="ALT_GPT" Type="Double" />
+          <Property Name="GGT" Type="Double" />
+          <Property Name="Acid_Uric" Type="Double" />
+        </EntityType>
+        <EntityType Name="KQXN">
+          <Key>
+            <PropertyRef Name="MaKQ" />
+          </Key>
+          <Property Name="MaKQ" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="MaBN" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="Khoa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Chuan_Doan" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TG_NM" Type="DateTime" Precision="3" />
+          <Property Name="BS_ChiDinh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Loai_XN" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TT_BenhNhan">
+          <Key>
+            <PropertyRef Name="MaBN" />
+          </Key>
+          <Property Name="MaBN" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Ten_BN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Gioi_Tinh" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Dia_Chi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Ngay_Sinh" Type="DateTime" Precision="3" />
+          <Property Name="So_BHYT" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Loai_DV_Kham" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="QLBNEntities2" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CT_KQXN" EntityType="Self.CT_KQXN" />
+          <EntitySet Name="KQXNs" EntityType="Self.KQXN" />
+          <EntitySet Name="TT_BenhNhan" EntityType="Self.TT_BenhNhan" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="QLBNModelStoreContainer" CdmEntityContainer="QLBNEntities2">
+          <EntitySetMapping Name="CT_KQXN">
+            <EntityTypeMapping TypeName="QLBNModel.CT_KQXN">
+              <MappingFragment StoreEntitySet="CT_KQXN">
+                <ScalarProperty Name="Ma_CT_KQXN" ColumnName="Ma_CT_KQXN" />
+                <ScalarProperty Name="MaKQ" ColumnName="MaKQ" />
+                <ScalarProperty Name="Loai_XN" ColumnName="Loai_XN" />
+                <ScalarProperty Name="Glucose" ColumnName="Glucose" />
+                <ScalarProperty Name="Urê" ColumnName="Urê" />
+                <ScalarProperty Name="Creatinin" ColumnName="Creatinin" />
+                <ScalarProperty Name="Cholesterol" ColumnName="Cholesterol" />
+                <ScalarProperty Name="Triglycerid" ColumnName="Triglycerid" />
+                <ScalarProperty Name="HDL_Cholesterol" ColumnName="HDL_Cholesterol" />
+                <ScalarProperty Name="AST_GOT" ColumnName="AST_GOT" />
+                <ScalarProperty Name="ALT_GPT" ColumnName="ALT_GPT" />
+                <ScalarProperty Name="GGT" ColumnName="GGT" />
+                <ScalarProperty Name="Acid_Uric" ColumnName="Acid_Uric" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KQXNs">
+            <EntityTypeMapping TypeName="QLBNModel.KQXN">
+              <MappingFragment StoreEntitySet="KQXN">
+                <ScalarProperty Name="MaKQ" ColumnName="MaKQ" />
+                <ScalarProperty Name="MaBN" ColumnName="MaBN" />
+                <ScalarProperty Name="Khoa" ColumnName="Khoa" />
+                <ScalarProperty Name="Chuan_Doan" ColumnName="Chuan_Doan" />
+                <ScalarProperty Name="TG_NM" ColumnName="TG_NM" />
+                <ScalarProperty Name="BS_ChiDinh" ColumnName="BS_ChiDinh" />
+                <ScalarProperty Name="Loai_XN" ColumnName="Loai_XN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TT_BenhNhan">
+            <EntityTypeMapping TypeName="QLBNModel.TT_BenhNhan">
+              <MappingFragment StoreEntitySet="TT_BenhNhan">
+                <ScalarProperty Name="MaBN" ColumnName="MaBN" />
+                <ScalarProperty Name="Ten_BN" ColumnName="Ten_BN" />
+                <ScalarProperty Name="Gioi_Tinh" ColumnName="Gioi_Tinh" />
+                <ScalarProperty Name="Dia_Chi" ColumnName="Dia_Chi" />
+                <ScalarProperty Name="Ngay_Sinh" ColumnName="Ngay_Sinh" />
+                <ScalarProperty Name="So_BHYT" ColumnName="So_BHYT" />
+                <ScalarProperty Name="Loai_DV_Kham" ColumnName="Loai_DV_Kham" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

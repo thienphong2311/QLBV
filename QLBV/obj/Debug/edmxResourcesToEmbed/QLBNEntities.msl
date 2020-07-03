@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QLBNModelStoreContainer" CdmEntityContainer="QLBNEntities2">
+    <EntitySetMapping Name="CT_KQXN">
+      <EntityTypeMapping TypeName="QLBNModel.CT_KQXN">
+        <MappingFragment StoreEntitySet="CT_KQXN">
+          <ScalarProperty Name="Ma_CT_KQXN" ColumnName="Ma_CT_KQXN" />
+          <ScalarProperty Name="MaKQ" ColumnName="MaKQ" />
+          <ScalarProperty Name="Loai_XN" ColumnName="Loai_XN" />
+          <ScalarProperty Name="Glucose" ColumnName="Glucose" />
+          <ScalarProperty Name="Urê" ColumnName="Urê" />
+          <ScalarProperty Name="Creatinin" ColumnName="Creatinin" />
+          <ScalarProperty Name="Cholesterol" ColumnName="Cholesterol" />
+          <ScalarProperty Name="Triglycerid" ColumnName="Triglycerid" />
+          <ScalarProperty Name="HDL_Cholesterol" ColumnName="HDL_Cholesterol" />
+          <ScalarProperty Name="AST_GOT" ColumnName="AST_GOT" />
+          <ScalarProperty Name="ALT_GPT" ColumnName="ALT_GPT" />
+          <ScalarProperty Name="GGT" ColumnName="GGT" />
+          <ScalarProperty Name="Acid_Uric" ColumnName="Acid_Uric" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KQXNs">
+      <EntityTypeMapping TypeName="QLBNModel.KQXN">
+        <MappingFragment StoreEntitySet="KQXN">
+          <ScalarProperty Name="MaKQ" ColumnName="MaKQ" />
+          <ScalarProperty Name="MaBN" ColumnName="MaBN" />
+          <ScalarProperty Name="Khoa" ColumnName="Khoa" />
+          <ScalarProperty Name="Chuan_Doan" ColumnName="Chuan_Doan" />
+          <ScalarProperty Name="TG_NM" ColumnName="TG_NM" />
+          <ScalarProperty Name="BS_ChiDinh" ColumnName="BS_ChiDinh" />
+          <ScalarProperty Name="Loai_XN" ColumnName="Loai_XN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TT_BenhNhan">
+      <EntityTypeMapping TypeName="QLBNModel.TT_BenhNhan">
+        <MappingFragment StoreEntitySet="TT_BenhNhan">
+          <ScalarProperty Name="MaBN" ColumnName="MaBN" />
+          <ScalarProperty Name="Ten_BN" ColumnName="Ten_BN" />
+          <ScalarProperty Name="Gioi_Tinh" ColumnName="Gioi_Tinh" />
+          <ScalarProperty Name="Dia_Chi" ColumnName="Dia_Chi" />
+          <ScalarProperty Name="Ngay_Sinh" ColumnName="Ngay_Sinh" />
+          <ScalarProperty Name="So_BHYT" ColumnName="So_BHYT" />
+          <ScalarProperty Name="Loai_DV_Kham" ColumnName="Loai_DV_Kham" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

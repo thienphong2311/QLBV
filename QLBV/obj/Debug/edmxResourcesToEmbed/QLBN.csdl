@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLBNModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TT_BenhNhan">
+    <Key>
+      <PropertyRef Name="MaBN" />
+    </Key>
+    <Property Name="MaBN" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Ten_BN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Gioi_Tinh" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Dia_Chi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Ngay_Sinh" Type="DateTime" Precision="3" />
+    <Property Name="So_BHYT" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Loai_DV_Kham" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="KQ_XN">
+    <Key>
+      <PropertyRef Name="Ma_XN" />
+    </Key>
+    <Property Name="Ma_XN" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Ten_XN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KQ_XN1" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Khoan_Tham_Chieu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Don_Vi" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Ma_BN" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Ma_Loai_XN" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Loai_XN">
+    <Key>
+      <PropertyRef Name="Ma_Loai_XN" />
+    </Key>
+    <Property Name="Ma_Loai_XN" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Ten_Loai_XN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="QLBNEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TT_BenhNhan" EntityType="Self.TT_BenhNhan" />
+    <EntitySet Name="KQ_XN" EntityType="Self.KQ_XN" />
+    <EntitySet Name="Loai_XN" EntityType="Self.Loai_XN" />
+  </EntityContainer>
+</Schema>

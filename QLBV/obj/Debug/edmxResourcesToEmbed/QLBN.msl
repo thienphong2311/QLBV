@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QLBNModelStoreContainer" CdmEntityContainer="QLBNEntities1">
+    <EntitySetMapping Name="TT_BenhNhan">
+      <EntityTypeMapping TypeName="QLBNModel.TT_BenhNhan">
+        <MappingFragment StoreEntitySet="TT_BenhNhan">
+          <ScalarProperty Name="Loai_DV_Kham" ColumnName="Loai_DV_Kham" />
+          <ScalarProperty Name="MaBN" ColumnName="MaBN" />
+          <ScalarProperty Name="Ten_BN" ColumnName="Ten_BN" />
+          <ScalarProperty Name="Gioi_Tinh" ColumnName="Gioi_Tinh" />
+          <ScalarProperty Name="Dia_Chi" ColumnName="Dia_Chi" />
+          <ScalarProperty Name="Ngay_Sinh" ColumnName="Ngay_Sinh" />
+          <ScalarProperty Name="So_BHYT" ColumnName="So_BHYT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KQ_XN">
+      <EntityTypeMapping TypeName="QLBNModel.KQ_XN">
+        <MappingFragment StoreEntitySet="KQ_XN">
+          <ScalarProperty Name="Ma_XN" ColumnName="Ma_XN" />
+          <ScalarProperty Name="Ten_XN" ColumnName="Ten_XN" />
+          <ScalarProperty Name="KQ_XN1" ColumnName="KQ_XN" />
+          <ScalarProperty Name="Khoan_Tham_Chieu" ColumnName="Khoan_Tham_Chieu" />
+          <ScalarProperty Name="Don_Vi" ColumnName="Don_Vi" />
+          <ScalarProperty Name="Ma_BN" ColumnName="Ma_BN" />
+          <ScalarProperty Name="Ma_Loai_XN" ColumnName="Ma_Loai_XN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Loai_XN">
+      <EntityTypeMapping TypeName="QLBNModel.Loai_XN">
+        <MappingFragment StoreEntitySet="Loai_XN">
+          <ScalarProperty Name="Ma_Loai_XN" ColumnName="Ma_Loai_XN" />
+          <ScalarProperty Name="Ten_Loai_XN" ColumnName="Ten_Loai_XN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLBNModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLBN.dbo.KQ_XN' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="KQ_XN">
+    <Key>
+      <PropertyRef Name="Ma_XN" />
+    </Key>
+    <Property Name="Ma_XN" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="Ten_XN" Type="nvarchar" MaxLength="50" />
+    <Property Name="KQ_XN" Type="nchar" MaxLength="10" />
+    <Property Name="Khoan_Tham_Chieu" Type="nvarchar" MaxLength="50" />
+    <Property Name="Don_Vi" Type="varchar" MaxLength="25" />
+    <Property Name="Ma_BN" Type="nchar" MaxLength="10" />
+    <Property Name="Ma_Loai_XN" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLBN.dbo.Loai_XN' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Loai_XN">
+    <Key>
+      <PropertyRef Name="Ma_Loai_XN" />
+    </Key>
+    <Property Name="Ma_Loai_XN" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="Ten_Loai_XN" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TT_BenhNhan">
+    <Key>
+      <PropertyRef Name="MaBN" />
+    </Key>
+    <Property Name="MaBN" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="Ten_BN" Type="nvarchar" MaxLength="50" />
+    <Property Name="Gioi_Tinh" Type="nvarchar" MaxLength="10" />
+    <Property Name="Dia_Chi" Type="nvarchar" MaxLength="255" />
+    <Property Name="Ngay_Sinh" Type="datetime" />
+    <Property Name="So_BHYT" Type="nvarchar" MaxLength="20" />
+    <Property Name="Loai_DV_Kham" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityContainer Name="QLBNModelStoreContainer">
+    <EntitySet Name="TT_BenhNhan" EntityType="Self.TT_BenhNhan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KQ_XN" EntityType="Self.KQ_XN" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [KQ_XN].[Ma_XN] AS [Ma_XN], 
+    [KQ_XN].[Ten_XN] AS [Ten_XN], 
+    [KQ_XN].[KQ_XN] AS [KQ_XN], 
+    [KQ_XN].[Khoan_Tham_Chieu] AS [Khoan_Tham_Chieu], 
+    [KQ_XN].[Don_Vi] AS [Don_Vi], 
+    [KQ_XN].[Ma_BN] AS [Ma_BN], 
+    [KQ_XN].[Ma_Loai_XN] AS [Ma_Loai_XN]
+    FROM [dbo].[KQ_XN] AS [KQ_XN]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Loai_XN" EntityType="Self.Loai_XN" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Loai_XN].[Ma_Loai_XN] AS [Ma_Loai_XN], 
+    [Loai_XN].[Ten_Loai_XN] AS [Ten_Loai_XN]
+    FROM [dbo].[Loai_XN] AS [Loai_XN]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

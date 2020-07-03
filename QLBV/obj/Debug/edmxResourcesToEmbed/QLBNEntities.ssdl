@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLBNModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CT_KQXN">
+    <Key>
+      <PropertyRef Name="Ma_CT_KQXN" />
+    </Key>
+    <Property Name="Ma_CT_KQXN" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="MaKQ" Type="char" MaxLength="10" />
+    <Property Name="Loai_XN" Type="char" MaxLength="10" />
+    <Property Name="Glucose" Type="float" />
+    <Property Name="Urê" Type="float" />
+    <Property Name="Creatinin" Type="float" />
+    <Property Name="Cholesterol" Type="float" />
+    <Property Name="Triglycerid" Type="float" />
+    <Property Name="HDL_Cholesterol" Type="float" />
+    <Property Name="AST_GOT" Type="float" />
+    <Property Name="ALT_GPT" Type="float" />
+    <Property Name="GGT" Type="float" />
+    <Property Name="Acid_Uric" Type="float" />
+  </EntityType>
+  <EntityType Name="KQXN">
+    <Key>
+      <PropertyRef Name="MaKQ" />
+    </Key>
+    <Property Name="MaKQ" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="MaBN" Type="char" MaxLength="10" />
+    <Property Name="Khoa" Type="nvarchar" MaxLength="50" />
+    <Property Name="Chuan_Doan" Type="nvarchar" MaxLength="255" />
+    <Property Name="TG_NM" Type="datetime" />
+    <Property Name="BS_ChiDinh" Type="nvarchar" MaxLength="50" />
+    <Property Name="Loai_XN" Type="char" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="TT_BenhNhan">
+    <Key>
+      <PropertyRef Name="MaBN" />
+    </Key>
+    <Property Name="MaBN" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="Ten_BN" Type="nvarchar" MaxLength="50" />
+    <Property Name="Gioi_Tinh" Type="nvarchar" MaxLength="10" />
+    <Property Name="Dia_Chi" Type="nvarchar" MaxLength="255" />
+    <Property Name="Ngay_Sinh" Type="datetime" />
+    <Property Name="So_BHYT" Type="nvarchar" MaxLength="20" />
+    <Property Name="Loai_DV_Kham" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityContainer Name="QLBNModelStoreContainer">
+    <EntitySet Name="CT_KQXN" EntityType="Self.CT_KQXN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KQXN" EntityType="Self.KQXN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TT_BenhNhan" EntityType="Self.TT_BenhNhan" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
